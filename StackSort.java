@@ -2,56 +2,35 @@ import java.util.Stack;
 
 public class StackSort {
  
-	
-	/*static Stack<Integer> sortedStack(Stack<Integer> inputStackMethod)
-	{
+	public static void main(String[] args) {
 		
+		Stack<Integer> inputStack = new Stack<>();
+		inputStack.push(65);
+		inputStack.push(7);
+		inputStack.push(54);
+		inputStack.push(5);
+		inputStack.push(22);
+		inputStack.push(92);
+		System.out.println(sortStack(inputStack));
+
+	}
+	
+	
+	static Stack<Integer> sortStack(Stack<Integer> inputStack)
+	{
 		Stack<Integer> tempStack = new Stack<>();
-		
-		while(!inputStackMethod.empty())
+		while(!inputStack.empty())
 		{
-			
-			int temp = inputStackMethod.pop();
-			
-			while(!tempStack.empty() && tempStack.peek()>temp)
-			{	
-			  inputStackMethod.push(tempStack.pop());	
-			}
-			tempStack.push(temp);
-		}
-		
-		return tempStack;
-	}*/
-	
-	
-	static Stack<Integer> sortedStack1(Stack<Integer> inputstack)
-	{
-		Stack<Integer> tempStack = new Stack<Integer>();
-		
-		while(!inputstack.empty())
-		{
-			int temp = inputstack.pop();
-			
+			int temp = inputStack.pop();
 			while(!tempStack.empty() && tempStack.peek() > temp)
 			{
-				
-				inputstack.push(tempStack.pop());
-				
+	           inputStack.push(tempStack.pop());			
 			}
 			tempStack.push(temp);
 		}
 		return tempStack;
 	}
-
-	public static void main(String[] args) {
 	
-	  Stack<Integer> inputStack = new Stack<>();
-	  inputStack.push(56);
-	  inputStack.push(54);
-	  inputStack.push(2);
-	  inputStack.push(69);
-	  inputStack.push(25);
-	  inputStack.push(95);
-	  System.out.println(sortedStack1(inputStack));
-}
+	
+	
 }
