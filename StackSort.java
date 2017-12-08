@@ -38,20 +38,12 @@ public class StackSort {
 				inputstack.push(tempStack.pop());
 				
 			}
-			
-			
 			tempStack.push(temp);
 		}
 		return tempStack;
 	}
-	
-	
-	
-	
-	
-	
-	
-  public static void main(String[] args) {
+
+	public static void main(String[] args) {
 	
 	  Stack<Integer> inputStack = new Stack<>();
 	  inputStack.push(56);
@@ -60,6 +52,6 @@ public class StackSort {
 	  inputStack.push(69);
 	  inputStack.push(25);
 	  inputStack.push(95);
-	  System.out.println( sortedStack1(inputStack));
+	  System.out.println(sortedStack1(inputStack));
 }
 }

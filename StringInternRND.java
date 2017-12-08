@@ -6,7 +6,7 @@ public class StringInternRND {
 		String s1 = new String("Hello");
 		String s2 = s1.intern();
 		
-		System.out.println(s1.equals(s2));
+		System.out.println(s1==s2);
 	}
 	
 }
