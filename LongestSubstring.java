@@ -3,37 +3,33 @@ import java.util.LinkedHashMap;
 
 public class LongestSubstring {
 
-	static void longestSubstring(String inputString)
-    {
-        LinkedHashMap<Character, Integer> tempmap = new LinkedHashMap<Character, Integer>();
-        char inputChar[] = inputString.toCharArray();
-        
-        for(int i=0 ; i< inputChar.length ;i++)
-        {
-        	if(!tempmap.containsKey(inputChar[i]))
-        	{
-        		tempmap.put(inputChar[i], i);
-        	}
-        	else
-        	{
-        		
-        		i = tempmap.get(inputChar[i]);
-        		tempmap.clear();
-        	}
-        	
-        }
-        
-        System.out.println(tempmap.keySet().toString());
-        
-        
-    }
-     
-    public static void main(String[] args) 
-    {    
-        //longestSubstring("javaconceptoftheday");
-         
-        System.out.println("==========================");
-         
-        longestSubstring("AKASH");
-    }    
+	
+	static void findLongestString(String inputString){
+		
+		char []inputStringArray =  inputString.toCharArray();
+		LinkedHashMap<Character, Integer> tempColloc = new LinkedHashMap<>();
+		for(int i=0 ; i<inputStringArray.length ;i++)
+		{
+			
+			if(!tempColloc.containsKey(inputStringArray[i]))
+			{
+				tempColloc.put(inputStringArray[i], i);
+			}else{
+				i = tempColloc.get(inputStringArray[i]);
+				tempColloc.clear();
+			}
+		}
+		System.out.println(tempColloc.keySet());
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		String testString ="AKASH";
+		findLongestString(testString);
+	}  
 }
